@@ -52,6 +52,13 @@ if __name__ == '__main__':
         print("match #{}:".format(idx+1))
         show_release_details(release)
         print()
+
+
+
+
+
+
+
 '''
 # Example output
 match #1:
