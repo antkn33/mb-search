@@ -11,15 +11,15 @@ flowchart TD
     newLines --> D@{ shape: diamond, label: "Choose One" }
     D --> results["`
     Track 1
-        Drums:
-        Bass:
-        Guitar:
-        Vocals:
+        - Drums:
+        - Bass:
+        - Guitar:
+        - Vocals:
     Track 2
-        Drums:
-        Bass:
-        Guitar:
-        Vocals:
+        - Drums:
+        - Bass:
+        - Guitar:
+        - Vocals:
     Etc. 
     `"]     
 
