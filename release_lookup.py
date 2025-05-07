@@ -1,3 +1,7 @@
+# made with ChatGPT's help
+# 5/6/25 returns 5 matches and lets user select which release to 
+#           search for details 
+
 import musicbrainzngs
 import json
 import pprint
@@ -28,9 +32,9 @@ def user_selection_search(release):
 
     try:
         # This returns the release data directly (not wrapped in a 'release' key)
-        release_data = musicbrainzngs.get_release_by_id(user_release_id, includes=["recordings"])
+        release_data = musicbrainzngs.get_release_by_id(user_release_id, includes=["recordings"]+["artist-credits"])
 
-        # pprint.pprint(release_data)  # For debug
+       # pprint.pprint(release_data)  # For debug[""]
 
         # Directly use release_data (not release_data['release'])
         print(f"\nTitle: {release_data['title']}")
@@ -40,6 +44,7 @@ def user_selection_search(release):
                 print(f"\nDisc format: {disc.get('format', 'Unknown')}")
                 for track in disc.get('tracks', []):
                     print(f"  Track {track['number']}: {track['title']}")
+                    print(["artist-credits"])
         else:
             print("No media info found.")
 
